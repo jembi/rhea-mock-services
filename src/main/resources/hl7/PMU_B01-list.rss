@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0" xmlns:rhea="http://rw.moh.gov/rhea/1.0">
+
+<channel>
+  <title>ADT_A28 Feed</title>
+  <link>http://rw.moh.gov/rhea/1.0</link>
+  <description>RHEA HIE ADT_A28 Feed</description>
+  <item>
+    <title>ADT_A28</title>
+    <link></link>
+    <description></description>
+    <rhea:content><![CDATA[MSH|^~\&|||||20120322120224.637+0200||PMU^B01^PMU_B01|5|T|2.5
+]]></rhea:content>
+  </item>
+  <item>
+    <title>ADT_A28</title>
+    <link></link>
+    <description></description>
+    <rhea:content><![CDATA[MSH|^~\&|||||20120322120224.637+0200||PMU^B01^PMU_B01|5|T|2.5
+]]></rhea:content>
+  </item>
+  <item>
+    <title>ADT_A28</title>
+    <link></link>
+    <description></description>
+    <rhea:content><![CDATA[MSH|^~\&|||||20120322120224.637+0200||PMU^B01^PMU_B01|5|T|2.5
+]]></rhea:content>
+  </item>
+</channel> 
+</rss>

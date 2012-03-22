@@ -60,7 +60,7 @@ public class FacilityRegistryMockService {
 		log.info("	Water Source param = " + water_src);
 		
 		log.info("Returning list of facilities...");
-		return MocksUtil.getFileAsString("/xml/MultipleFacilitiesWITHedit.xml");
+		return MocksUtil.getFileAsString("/xml/QueryFacilities.xml");
 	}
 	
 	@Path("/facility/{fid}")
@@ -73,7 +73,7 @@ public class FacilityRegistryMockService {
 		log.info("	FID path param: " + fid);
 		
 		log.info("Returning facility...");
-		return MocksUtil.getFileAsString("/xml/SingleFacilityWithEdit.xml");
+		return MocksUtil.getFileAsString("/xml/GetFacility.xml");
 	}
 
 }
