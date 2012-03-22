@@ -15,6 +15,7 @@ import org.apache.commons.logging.LogFactory;
 import org.jembi.rhea.MocksUtil;
 
 import ca.uhn.hl7v2.model.Message;
+import ca.uhn.hl7v2.model.v25.message.ADT_A05;
 import ca.uhn.hl7v2.parser.GenericParser;
 import ca.uhn.hl7v2.parser.Parser;
 
@@ -38,8 +39,10 @@ public class ClientRegistryMockService {
 		try {
 			hl7 = p.parse(body);
 			
-			if (hl7 != null) {
-				log.info("Successfully parsed HL7v2 message!");
+			ADT_A05 adt_a05 = (ADT_A05) hl7;
+			
+			if (adt_a05 != null) {
+				log.info("Successfully parsed HL7v2 ADT_A05 message!");
 				return Response.created(null).build();
 			}
 		} catch (Exception e) {
@@ -57,7 +60,7 @@ public class ClientRegistryMockService {
 		log.info("Called mock client registry: query patients");
 		
 		log.info("Returning list of patients...");
-		return MocksUtil.getFileAsString("/xml/undefined.xml");
+		return MocksUtil.getFileAsString("/hl7/ADT_A28-list.atom");
 	}
 	
 	@Path("/patient/{pid}")
@@ -67,7 +70,7 @@ public class ClientRegistryMockService {
 		log.info("Called mock client registry: get patient");
 		
 		log.info("Returning patient...");
-		return MocksUtil.getFileAsString("/xml/undefined.xml");
+		return MocksUtil.getFileAsString("/hl7/ADT_A28");
 	}
 	
 	@Path("/patient/{pid}")
@@ -85,8 +88,10 @@ public class ClientRegistryMockService {
 		try {
 			hl7 = p.parse(body);
 			
-			if (hl7 != null) {
-				log.info("Successfully parsed HL7v2 message!");
+			ADT_A05 adt_a05 = (ADT_A05) hl7;
+			
+			if (adt_a05 != null) {
+				log.info("Successfully parsed HL7v2 ADT_A05 message!");
 				return Response.created(null).build();
 			}
 		} catch (Exception e) {

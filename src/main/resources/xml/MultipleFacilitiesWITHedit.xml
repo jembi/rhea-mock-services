@@ -2,115 +2,127 @@
 <multipleFaciltyReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="file:///C:/Users/Mead%20Walker/Documents/Global%20Aids%20Initiative/Kigali%20Meeting/RHEA%20Content/FacilitySchemas/MultipleFacilityWithEdit.xsd">
 	<facilityReport>
-		<HC_FACILITY_NUMBER>1234567890</HC_FACILITY_NUMBER>
-		<HC_FACILITY_NAME>Kigali Health Clinic</HC_FACILITY_NAME>
-		<HC_FACILITY_CODE>CS</HC_FACILITY_CODE>
-		<HC_FACILITY_TYPE_DESCRIPTION>This is a placeholder for code = "oth"
-		</HC_FACILITY_TYPE_DESCRIPTION>
-		<HC_FACILITY_STATUS_CODE>1</HC_FACILITY_STATUS_CODE>
-		<HC_FACILITY_OPENING_DATE_PLANNED>
+		<FOSAID>1234567890</FOSAID>
+		<name>Kigali Health Clinic</name>
+		<code>CS</code>
+		<typeDescription>This is a placeholder for code = "oth"
+		</typeDescription>
+		<statusCode>1</statusCode>
+		<dateOpened>
 			<Year>2018</Year>
-		</HC_FACILITY_OPENING_DATE_PLANNED>
-		<HC_FACILTY_CATEGORY_CODE>4</HC_FACILTY_CATEGORY_CODE>
-		<HC_FACILITY_DATE_INAUGURATED>
+		</dateOpened>
+		<categoryCode>4</categoryCode>
+		<dateInaugurated>
 			<Date>2003-10-23</Date>
-		</HC_FACILITY_DATE_INAUGURATED>
-		<HC_FACILITY_DIRECTOR_NAME>Robert Roosa</HC_FACILITY_DIRECTOR_NAME>
-		<HC_FACILITY_DIRECTOR_NID>0987654321</HC_FACILITY_DIRECTOR_NID>
-		<HC_FACILITY_DIRECTOR_EMAIL>DirKHC@moh.rw</HC_FACILITY_DIRECTOR_EMAIL>
-		<PRIMARY_REFERRAL_FACILITY_FOSA_NUMBER>3334477889
-		</PRIMARY_REFERRAL_FACILITY_FOSA_NUMBER>
-		<PROVINCE_CODE>1</PROVINCE_CODE>
-		<DISTRICT_CODE>102</DISTRICT_CODE>
-		<SECTOR_CODE>10234</SECTOR_CODE>
-		<CELL_CODE>1023466</CELL_CODE>
-		<VILLAGE_CODE>102346639</VILLAGE_CODE>
-		<POST_OFFICE_BOX>Box 3429</POST_OFFICE_BOX>
-		<EMAIL>KHCmainAccess@moh.rw</EMAIL>
-		<STREET_NAME>Healthcare Lane</STREET_NAME>
-		<STREET_NUMBER>3</STREET_NUMBER>
-		<COMPLEMENT>Ground Floor</COMPLEMENT>
-		<POSTAL_CODE>3F34</POSTAL_CODE>
-		<COUNTRY_CODE>RW</COUNTRY_CODE>
-		<LATITUDE>23'3"</LATITUDE>
-		<LONGITUDE>29'4"</LONGITUDE>
-		<CELULAR_TELEPHONE>345-444-2345</CELULAR_TELEPHONE>
-		<BUSINESS_TELEPHONE>123-567-8901</BUSINESS_TELEPHONE>
-		<TARGET_POPULATION>345200</TARGET_POPULATION>
-		<YEAR_POPULATION_ESTIMATE>2007</YEAR_POPULATION_ESTIMATE>
-		<HC_FACILITY_CATCHMENT_AREA_VILLAGE_CODE>45678
-		</HC_FACILITY_CATCHMENT_AREA_VILLAGE_CODE>
-		<HC_FACILITY_CATCHMENT_AREA_VILLAGE_CODE>112
-		</HC_FACILITY_CATCHMENT_AREA_VILLAGE_CODE>
-		<HC_FACILITY_CATCHMENT_AREA_VILLAGE_CODE>Cxxxx
-		</HC_FACILITY_CATCHMENT_AREA_VILLAGE_CODE>
-		<HC_FACILITY_NUMBER_ROOMS>6</HC_FACILITY_NUMBER_ROOMS>
-		<HC_FACILITY_NUMBER_PT_BEDS>4</HC_FACILITY_NUMBER_PT_BEDS>
-		<HC_FACILITY_NUMBER_AMBULANCES>0</HC_FACILITY_NUMBER_AMBULANCES>
-		<HC_FACILITY_NUMBER_CARS>2</HC_FACILITY_NUMBER_CARS>
-		<HC_FACILITY_NUMBER_MOTORCYCLES>3</HC_FACILITY_NUMBER_MOTORCYCLES>
-		<HC_FACILITY_ELETRICITY_SOURCE_CODE>2
-		</HC_FACILITY_ELETRICITY_SOURCE_CODE>
-		<HC_FACILITY_GENERATOR_KVA>350</HC_FACILITY_GENERATOR_KVA>
-		<HC_FACILITY_WATER_SOURCE_CODE>7</HC_FACILITY_WATER_SOURCE_CODE>
-		<HC_FACILITY_NUMBER_REFRIGERATORS>1</HC_FACILITY_NUMBER_REFRIGERATORS>
-		<HC_FACILITY_COMPUTERS_NUMBERS>3</HC_FACILITY_COMPUTERS_NUMBERS>
-		<HC_FACILITY_INTERNET_CONNECTION_PRIMARY_CODE>1
-		</HC_FACILITY_INTERNET_CONNECTION_PRIMARY_CODE>
-		<HC_FACILITY_INTERNET_CONNECTION_SECONDARY_CODE>2
-		</HC_FACILITY_INTERNET_CONNECTION_SECONDARY_CODE>
+		</dateInaugurated>
+		<directorName>Robert Roosa</directorName>
+		<directorNID>0987654321</directorNID>
+		<directorEmail>DirKHC@moh.rw</directorEmail>
+		<primaryReferralFacilityID>3334477889</primaryReferralFacilityID>
+		<provinceCode>01</provinceCode>
+		<districtCode>0102</districtCode>
+		<sectorCode>010234</sectorCode>
+		<cellCode>01023466</cellCode>
+		<villageCode>0102346639</villageCode>
+		<postOfficeBox>Box 3429</postOfficeBox>
+		<email>KHCmainAccess@moh.rw</email>
+		<streetName>Healthcare Lane</streetName>
+		<streetNumber>3</streetNumber>
+		<complement>Ground Floor</complement>
+		<postalCode>3F34</postalCode>
+		<countryCode>RW</countryCode>
+		<latitude>23'3"</latitude>
+		<longitude>29'4"</longitude>
+		<cellularTelephone>345-444-2345</cellularTelephone>
+		<businessTelephone>123-567-8901</businessTelephone>
+		<targetPopulation>345200</targetPopulation>
+		<yearpopulationEstimate>2007</yearpopulationEstimate>
+		<catchmentAreaVillageCode>4567</catchmentAreaVillageCode>
+		<catchmentAreaVillageCode>112</catchmentAreaVillageCode>
+		<catchmentAreaVillageCode>Cxxxx</catchmentAreaVillageCode>
+		<numberRooms>6</numberRooms>
+		<numberPatientBeds>4</numberPatientBeds>
+		<numberAmbulances>0</numberAmbulances>
+		<numberCars>2</numberCars>
+		<numberMotorcycles>3</numberMotorcycles>
+		<electricitySourceCode>2</electricitySourceCode>
+		<generatorKVA>350</generatorKVA>
+		<waterSourceCode>7</waterSourceCode>
+		<numberRefrigerators>1</numberRefrigerators>
+		<numberComputers>3</numberComputers>
+		<primaryInternetConnectionCode>1</primaryInternetConnectionCode>
+		<secondaryInternetConnectionCode>2</secondaryInternetConnectionCode>
 		<!-- Additional field added -->
-		<CF_CODE>123</CF_CODE>
-		<CF_SECTOR>234</CF_SECTOR>
-		<GOVT_FOSA_CODE>345</GOVT_FOSA_CODE>
-		<PBF_CODE>432</PBF_CODE>
-		<DATE_CLOSED></DATE_CLOSED>
-		<DIRECTOR_CELL_NUMBER>1234566789</DIRECTOR_CELL_NUMBER>
-		<NUMBER_FUNCTIONING_COMPUTERS>3</NUMBER_FUNCTIONING_COMPUTERS>
+		<CFCode>123</CFCode>
+		<CFSector>234</CFSector>
+		<govtFosaCode>345</govtFosaCode>
+		<PFBCode>432</PFBCode>
+		<dateClosed></dateClosed>
+		<directorCellNumber>1234566789</directorCellNumber>
+		<numberFunctioningComputers>3</numberFunctioningComputers>
+		<dateModified></dateModified>
+		<parentFOSAID></parentFOSAID>
 	</facilityReport>
 	<facilityReport>
-		<HC_FACILITY_NUMBER>345698798</HC_FACILITY_NUMBER>
-		<HC_FACILITY_NAME>Another Health Clinic</HC_FACILITY_NAME>
-		<HC_FACILITY_CODE>HN</HC_FACILITY_CODE>
-		<HC_FACILITY_STATUS_CODE>1</HC_FACILITY_STATUS_CODE>
-		<HC_FACILTY_CATEGORY_CODE>4</HC_FACILTY_CATEGORY_CODE>
-		<HC_FACILITY_DATE_INAUGURATED>
-			<MonthYear>1995-06</MonthYear>
-		</HC_FACILITY_DATE_INAUGURATED>
-		<HC_FACILITY_DIRECTOR_NAME>Susan Smith</HC_FACILITY_DIRECTOR_NAME>
-		<HC_FACILITY_DIRECTOR_NID>9999776543</HC_FACILITY_DIRECTOR_NID>
-		<PRIMARY_REFERRAL_FACILITY_FOSA_NUMBER>7777777777
-		</PRIMARY_REFERRAL_FACILITY_FOSA_NUMBER>
-		<PROVINCE_CODE>03</PROVINCE_CODE>
-		<DISTRICT_CODE>0312</DISTRICT_CODE>
-		<SECTOR_CODE>031245</SECTOR_CODE>
-		<CELL_CODE>03124588</CELL_CODE>
-		<VILLAGE_CODE>0312458899</VILLAGE_CODE>
-		<TARGET_POPULATION>1000000</TARGET_POPULATION>
-		<YEAR_POPULATION_ESTIMATE>2010</YEAR_POPULATION_ESTIMATE>
-		<HC_FACILITY_NUMBER_ROOMS>45</HC_FACILITY_NUMBER_ROOMS>
-		<HC_FACILITY_NUMBER_PT_BEDS>240</HC_FACILITY_NUMBER_PT_BEDS>
-		<HC_FACILITY_NUMBER_AMBULANCES>8</HC_FACILITY_NUMBER_AMBULANCES>
-		<HC_FACILITY_NUMBER_CARS>0</HC_FACILITY_NUMBER_CARS>
-		<HC_FACILITY_NUMBER_MOTORCYCLES>23</HC_FACILITY_NUMBER_MOTORCYCLES>
-		<HC_FACILITY_ELETRICITY_SOURCE_CODE>5
-		</HC_FACILITY_ELETRICITY_SOURCE_CODE>
-		<HC_FACILITY_WATER_SOURCE_CODE>1</HC_FACILITY_WATER_SOURCE_CODE>
-		<HC_FACILITY_NUMBER_REFRIGERATORS>10
-		</HC_FACILITY_NUMBER_REFRIGERATORS>
-		<HC_FACILITY_COMPUTERS_NUMBERS>12</HC_FACILITY_COMPUTERS_NUMBERS>
-		<HC_FACILITY_INTERNET_CONNECTION_PRIMARY_CODE>1
-		</HC_FACILITY_INTERNET_CONNECTION_PRIMARY_CODE>
-		<HC_FACILITY_INTERNET_CONNECTION_SECONDARY_CODE>1
-		</HC_FACILITY_INTERNET_CONNECTION_SECONDARY_CODE>
+		<FOSAID>1234567892</FOSAID>
+		<name>Kigali Health Clinic 2</name>
+		<code>CS</code>
+		<typeDescription>This is a placeholder for code = "oth"
+		</typeDescription>
+		<statusCode>1</statusCode>
+		<dateOpened>
+			<Year>2016</Year>
+		</dateOpened>
+		<categoryCode>3</categoryCode>
+		<dateInaugurated>
+			<Date>2003-10-23</Date>
+		</dateInaugurated>
+		<directorName>Robert Roosa</directorName>
+		<directorNID>0987654321</directorNID>
+		<directorEmail>DirKHC@moh.rw</directorEmail>
+		<primaryReferralFacilityID>3334477889</primaryReferralFacilityID>
+		<provinceCode>01</provinceCode>
+		<districtCode>0102</districtCode>
+		<sectorCode>010234</sectorCode>
+		<cellCode>01023466</cellCode>
+		<villageCode>0102346639</villageCode>
+		<postOfficeBox>Box 3429</postOfficeBox>
+		<email>KHCmainAccess@moh.rw</email>
+		<streetName>Healthcare Lane</streetName>
+		<streetNumber>3</streetNumber>
+		<complement>Ground Floor</complement>
+		<postalCode>3F34</postalCode>
+		<countryCode>RW</countryCode>
+		<latitude>23'3"</latitude>
+		<longitude>29'4"</longitude>
+		<cellularTelephone>345-444-2345</cellularTelephone>
+		<businessTelephone>123-567-8901</businessTelephone>
+		<targetPopulation>345200</targetPopulation>
+		<yearpopulationEstimate>2007</yearpopulationEstimate>
+		<catchmentAreaVillageCode>45678</catchmentAreaVillageCode>
+		<catchmentAreaVillageCode>112</catchmentAreaVillageCode>
+		<catchmentAreaVillageCode>Cxxxx</catchmentAreaVillageCode>
+		<numberRooms>2</numberRooms>
+		<numberPatientBeds>15</numberPatientBeds>
+		<numberAmbulances>1</numberAmbulances>
+		<numberCars>1</numberCars>
+		<numberMotorcycles>4</numberMotorcycles>
+		<electricitySourceCode>1</electricitySourceCode>
+		<generatorKVA>370</generatorKVA>
+		<waterSourceCode>3</waterSourceCode>
+		<numberRefrigerators>2</numberRefrigerators>
+		<numberComputers>2</numberComputers>
+		<primaryInternetConnectionCode>1</primaryInternetConnectionCode>
+		<secondaryInternetConnectionCode>2</secondaryInternetConnectionCode>
 		<!-- Additional field added -->
-		<CF_CODE>123</CF_CODE>
-		<CF_SECTOR>234</CF_SECTOR>
-		<GOVT_FOSA_CODE>345</GOVT_FOSA_CODE>
-		<PBF_CODE>432</PBF_CODE>
-		<DATE_CLOSED></DATE_CLOSED>
-		<DIRECTOR_CELL_NUMBER>1234566789</DIRECTOR_CELL_NUMBER>
-		<NUMBER_FUNCTIONING_COMPUTERS>3</NUMBER_FUNCTIONING_COMPUTERS>
-		<TRANSPORT_AVAILABLE></TRANSPORT_AVAILABLE> 
+		<CFCode>321</CFCode>
+		<CFSector>432</CFSector>
+		<govtFosaCode>543</govtFosaCode>
+		<PFBCode>654</PFBCode>
+		<dateClosed></dateClosed>
+		<directorCellNumber>1234566789</directorCellNumber>
+		<numberFunctioningComputers>2</numberFunctioningComputers>
+		<dateModified></dateModified>
+		<parentFOSAID></parentFOSAID>
 	</facilityReport>
 </multipleFaciltyReport>

@@ -59,7 +59,7 @@ public class SharedHealthRecordMockService {
 		log.info("Called mock Shared Health Record: query for encounters");
 		
 		log.info("Returning list of encounters for patient: " + pid + "...");
-		return MocksUtil.getFileAsString("/xml/undefined.xml");
+		return MocksUtil.getFileAsString("/hl7/ORU_R01");
 	}
 	
 	@Path("/patient/{pid}/encounter/{eid}")
@@ -69,7 +69,7 @@ public class SharedHealthRecordMockService {
 		log.info("Called mock Shared Health Record: get encounter");
 		
 		log.info("Returning encounter: " + eid + " for pateint: " + pid + "...");
-		return MocksUtil.getFileAsString("/xml/undefined.xml");
+		return MocksUtil.getFileAsString("/hl7/ORU_R01");
 	}
 	
 }

@@ -23,17 +23,17 @@ public class ProfessionalRegsitryMockService {
 		log.info("Called mock professionals registry: query professionals");
 		
 		log.info("Returning list of professionals...");
-		return MocksUtil.getFileAsString("/xml/undefined.xml");
+		return MocksUtil.getFileAsString("/hl7/PMU_B01-list.atom");
 	}
 	
 	@Path("/professional/{id}")
 	@GET
 	@Produces("text/xml")
 	public String getProfessional(@PathParam("id") String id) throws IOException {
-		log.info("Called mock professionals registry: get prefessional");
+		log.info("Called mock professionals registry: get professional");
 		
 		log.info("Returning prefessional with id " + id + " ...");
-		return MocksUtil.getFileAsString("/xml/undefined.xml");
+		return MocksUtil.getFileAsString("/hl7/PMU_B01");
 	}
 	
 }
