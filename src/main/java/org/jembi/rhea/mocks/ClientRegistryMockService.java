@@ -60,7 +60,7 @@ public class ClientRegistryMockService {
 		log.info("Called mock client registry: query patients");
 		
 		log.info("Returning list of patients...");
-		return MocksUtil.getFileAsString("/hl7/ADT_A28-list.atom");
+		return MocksUtil.getFileAsString("/hl7/ADT_A28-list");
 	}
 	
 	@Path("/patient/{pid}")
