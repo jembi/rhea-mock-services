@@ -1,6 +1,7 @@
 package org.jembi.rhea.mocks;
 
 import java.io.IOException;
+import java.util.UUID;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -32,8 +33,17 @@ public class ProfessionalRegsitryMockService {
 	public String getProfessional(@PathParam("id") String id) throws IOException {
 		log.info("Called mock professionals registry: get professional");
 		
-		log.info("Returning prefessional with id " + id + " ...");
+		log.info("Returning professional with id " + id + " ...");
 		return MocksUtil.getFileAsString("/hl7/PMU_B01");
+	}
+	
+	@Path("/professional/{id}/epid")
+	@GET
+	public String getProfessionalEcid(@PathParam("id") String id) {
+		log.info("Called mock professionals registry: get professional EPID");
+		
+		log.info("Returning epid for professional with id " + id + " ...");
+		return UUID.randomUUID().toString();
 	}
 	
 }

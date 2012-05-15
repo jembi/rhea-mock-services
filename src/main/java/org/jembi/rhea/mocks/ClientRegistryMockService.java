@@ -1,6 +1,7 @@
 package org.jembi.rhea.mocks;
 
 import java.io.IOException;
+import java.util.UUID;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -101,6 +102,15 @@ public class ClientRegistryMockService {
 		
 		return Response.status(500).build();
 		
+	}
+	
+	@Path("/patient/{pid}/ecid")
+	@GET
+	public String getPatientEcid(@PathParam("pid") String pid) {
+		log.info("Called mock client registry: get patient ECID");
+		
+		log.info("Returning ecid for client with id " + pid + " ...");
+		return UUID.randomUUID().toString();
 	}
 	
 }
