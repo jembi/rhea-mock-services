@@ -24,7 +24,7 @@ public class ProfessionalRegsitryMockService {
 		log.info("Called mock professionals registry: query professionals");
 		
 		log.info("Returning list of professionals...");
-		return MocksUtil.getFileAsString("/hl7/PMU_B01-list.atom");
+		return MocksUtil.getFileAsString("/hl7/PMU_B01-list.rss");
 	}
 	
 	@Path("/professional/{id}")
@@ -34,7 +34,7 @@ public class ProfessionalRegsitryMockService {
 		log.info("Called mock professionals registry: get professional");
 		
 		log.info("Returning professional with id " + id + " ...");
-		return MocksUtil.getFileAsString("/hl7/PMU_B01");
+		return MocksUtil.getFileAsString("/hl7/PMU_B01.xml");
 	}
 	
 	@Path("/professional/{id}/epid")
