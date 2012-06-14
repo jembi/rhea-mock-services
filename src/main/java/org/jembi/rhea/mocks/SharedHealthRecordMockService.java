@@ -88,9 +88,6 @@ public class SharedHealthRecordMockService {
 		try {
 			hl7 = p.parse(body);
 			
-			String encode = p.encode(hl7, "XML");
-			log.info("XML encoding: \n" + encode);
-			
 			ADT_A05 adtMsg = (ADT_A05) hl7;
 			
 			if (adtMsg != null) {
