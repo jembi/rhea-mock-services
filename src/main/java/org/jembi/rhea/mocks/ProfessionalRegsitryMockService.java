@@ -43,7 +43,11 @@ public class ProfessionalRegsitryMockService {
 		log.info("Called mock professionals registry: get professional EPID");
 		
 		log.info("Returning epid for professional with id " + id + " ...");
-		return UUID.randomUUID().toString();
+		if (id.equals("NID-987654321")) {
+			return "e97a611b-7997-4229-b74c-c2dfe3342b42";
+		} else {
+			return UUID.randomUUID().toString();
+		}
 	}
 	
 }

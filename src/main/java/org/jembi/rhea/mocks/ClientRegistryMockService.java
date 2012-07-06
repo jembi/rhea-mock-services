@@ -110,7 +110,12 @@ public class ClientRegistryMockService {
 		log.info("Called mock client registry: get patient ECID");
 		
 		log.info("Returning ecid for client with id " + pid + " ...");
-		return UUID.randomUUID().toString();
+		if (pid.equals("NID-123456789")) {
+			//return "dc8d2234-7fce-4869-945e-97c8b7d97332";
+			return "1234";
+		} else {
+			return UUID.randomUUID().toString();
+		}
 	}
 	
 }
