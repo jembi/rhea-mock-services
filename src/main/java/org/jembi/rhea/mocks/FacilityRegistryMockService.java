@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
@@ -12,16 +11,16 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jembi.rhea.MocksUtil;
 
-@Path("/ws/rest/v1")
+@Path("/api")
 public class FacilityRegistryMockService {
 	
 	Log log = LogFactory.getLog(this.getClass());
 	
-	@Path("/facilities")
+	@Path("collections/26.rss")
 	@GET 
 	@Produces("text/xml")
 	public String queryFacility(@QueryParam("updated_since") String updatedSince,
-								@QueryParam("fid") String fid,
+								@QueryParam("fosaid") String fosaid,
 								@QueryParam("name") String name,
 								@QueryParam("type") String type,
 								@QueryParam("status") String status,
@@ -42,7 +41,7 @@ public class FacilityRegistryMockService {
 		
 		// log all param values
 		log.info("	Updated since param = " + updatedSince);
-		log.info("	FID param = " + fid);
+		log.info("	FID param = " + fosaid);
 		log.info("	Name param = " + name);
 		log.info("	Type param = " + type);
 		log.info("	Status param = " + status);
@@ -60,20 +59,11 @@ public class FacilityRegistryMockService {
 		log.info("	Water Source param = " + water_src);
 		
 		log.info("Returning list of facilities...");
+		if (fosaid != null && !fosaid.isEmpty()) {
+			return MocksUtil.getFileAsString("/xml/GetFacility.xml");
+		}
+		
 		return MocksUtil.getFileAsString("/xml/QueryFacilities.xml");
 	}
 	
-	@Path("/facility/{fid}")
-	@GET 
-	@Produces("text/xml")
-	public String getFacility(@PathParam("fid") String fid) throws IOException {
-		log.info("Called mock facility registry: get facility");
-		
-		// log param value
-		log.info("	FID path param: " + fid);
-		
-		log.info("Returning facility...");
-		return MocksUtil.getFileAsString("/xml/GetFacility.xml");
-	}
-
 }

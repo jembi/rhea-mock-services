@@ -1,9 +1,7 @@
 package org.jembi.rhea.mocks;
 
 import java.io.IOException;
-import java.util.UUID;
 
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
@@ -15,66 +13,42 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jembi.rhea.MocksUtil;
 
-import ca.uhn.hl7v2.model.Message;
-import ca.uhn.hl7v2.model.v25.message.ADT_A05;
-import ca.uhn.hl7v2.parser.GenericParser;
-import ca.uhn.hl7v2.parser.Parser;
-
-@Path("/ws/rest/v1")
+@Path("/openempi-admin/openempi-ws-rest")
 public class ClientRegistryMockService {
 	
 	Log log = LogFactory.getLog(this.getClass());
 	
-	@Path("/patients")
-	@POST
+	@Path("/person-manager-resource/addPerson")
+	@PUT
 	public Response registerPatient(String body) {
 		log.info("Called mock client registry: register patient");
 		
 		log.info("Body recieved: " + body);
 		
-		log.info("Attempting to parser the body as a HL7v2 message...");
-		
-		Parser p = new GenericParser();
-		
-		Message hl7 = null;
-		try {
-			hl7 = p.parse(body);
-			
-			ADT_A05 adt_a05 = (ADT_A05) hl7;
-			
-			if (adt_a05 != null) {
-				log.info("Successfully parsed HL7v2 ADT_A05 message!");
-				return Response.created(null).build();
-			}
-		} catch (Exception e) {
-			log.error("Parsing failed: ", e);
-			return Response.status(400).entity("Failed to parse HL7 message: " + e).build();
-		}
-		
-		return Response.status(500).build();
+		return Response.status(201).build();
 	}
 	
-	@Path("/patients")
-	@GET
+	@Path("/person-query-resource/findPersonsByAttributes")
+	@POST
 	@Produces("text/xml")
-	public String queryPatients() throws IOException {
+	public String queryPatients(String body) throws IOException {
 		log.info("Called mock client registry: query patients");
 		
 		log.info("Returning list of patients...");
-		return MocksUtil.getFileAsString("/hl7/ADT_A28-list.rss");
+		return MocksUtil.getFileAsString("/xml/openempi-people.xml");
 	}
 	
-	@Path("/patient/{pid}")
-	@GET
+	@Path("/person-query-resource/findPersonById")
+	@POST
 	@Produces("text/xml")
-	public String getPatient(@PathParam("pid") String pid) throws IOException {
+	public String getPatient(String body) throws IOException {
 		log.info("Called mock client registry: get patient");
 		
 		log.info("Returning patient...");
-		return MocksUtil.getFileAsString("/hl7/ADT_A28.xml");
+		return MocksUtil.getFileAsString("/xml/openempi-person.xml");
 	}
 	
-	@Path("/patient/{pid}")
+	@Path("/person-manager-resource/updatePerson")
 	@PUT
 	public Response updatePatient(String body, @PathParam("pid") String pid) {
 		log.info("Called mock client registry: update patient");
@@ -83,39 +57,8 @@ public class ClientRegistryMockService {
 		
 		log.info("Attempting to parser the body as a HL7v2 message...");
 		
-		Parser p = new GenericParser();
+		return Response.status(204).build();
 		
-		Message hl7 = null;
-		try {
-			hl7 = p.parse(body);
-			
-			ADT_A05 adt_a05 = (ADT_A05) hl7;
-			
-			if (adt_a05 != null) {
-				log.info("Successfully parsed HL7v2 ADT_A05 message!");
-				return Response.created(null).build();
-			}
-		} catch (Exception e) {
-			log.error("Parsing failed: ", e);
-			return Response.status(400).entity("Failed to parse HL7 message: " + e).build();
-		}
-		
-		return Response.status(500).build();
-		
-	}
-	
-	@Path("/patient/{pid}/ecid")
-	@GET
-	public String getPatientEcid(@PathParam("pid") String pid) {
-		log.info("Called mock client registry: get patient ECID");
-		
-		log.info("Returning ecid for client with id " + pid + " ...");
-		if (pid.equals("NID-123456789")) {
-			//return "dc8d2234-7fce-4869-945e-97c8b7d97332";
-			return "1234";
-		} else {
-			return UUID.randomUUID().toString();
-		}
 	}
 	
 }
