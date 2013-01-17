@@ -43,7 +43,7 @@
             <property name="auxiliary;index" value="1"/>
         </properties>
     </global-element>
-    <flow SubFlow="false" name="rapidSMSMockFlow1" entity-id="174a9b93-3364-46b6-95c2-2e82000dc269">
+    <flow SubFlow="false" name="rapidSMSMockFlow1" entity-id="3e0aad05-eed7-476c-a125-661de7892691">
         <properties>
             <property name="processingStrategy2"/>
             <property name="processingStrategy"/>
