@@ -65,7 +65,7 @@ public class SharedHealthRecordMockService {
 	
 	// === Services below this line are not used ===
 	
-	@Path("/patient/{pid}/encounter/{eid}")
+	@Path("patient/{pid}/encounter/{eid}")
 	@GET
 	@Produces("text/xml")
 	public String getEncounter(@PathParam("pid") String pid, @PathParam("eid") String eid) throws IOException {
