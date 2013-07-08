@@ -2,6 +2,7 @@ package org.jembi.rhea.mocks;
 
 import java.io.IOException;
 
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
@@ -61,4 +62,13 @@ public class ClientRegistryMockService {
 		
 	}
 	
+	@Path("/person-query-resource/retrieveNotificationsByDate")
+	@GET
+	@Produces("text/xml")
+	public String getIdentifierUpdateEvents(String body) throws IOException {
+		log.info("Called mock client registry: retrieve notifications by date");
+		
+		log.info("Returning identifierUpdateEvents...");
+		return MocksUtil.getFileAsString("/xml/openempi-identifierupdates.xml");
+	}
 }
